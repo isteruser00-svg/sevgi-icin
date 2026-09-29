@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>❤️</title>
-
-<style>
-body {
-    margin: 0;
-    background: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 150px;
-}
-
-#kalp {
-    font-size: 100px;
-    cursor: pointer;
-}
-
-#yazi {
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Sevgi için</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffc0cb; /* Pembe arka plan */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 420px;
+        }
+        h1 {
+            color: #e91e63;
+            margin-bottom: 8px;
+        }
+        .tikla {
+            color: #e91e63;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 10px;
+            display: inline-block;
+            border-bottom: 1px dashed #e91e63;
+        }
+        .tikla:hover {
+            opacity: 0.8;
+        }
+        #mesaj {
+            display: none;
+            margin-top: 30px;
+            line-height: 1.8;
+            color: #333;
+            font-size: 17px;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <h1>Sevgi</h1>
+        <div class="tikla" onclick="goster()">
+            (buraya tıkla)
+        </div>
 
-<div id="kalp">❤️</div>
+        <div id="mesaj">
+            Sevgi,<br><br>
+            Bugün aklıma sen geldin.<br>
+            O yüzden oturdum ve senin için bir şey yazmak istedim.<br><br>
+            Senin gülüşün, sesin, varlığın...<br>
+            Bunların hepsi bana iyi geliyor.<br><br>
+            Mutlu olmanı istiyorum.<br>
+            Sadece bugün değil, her gün.<br><br>
+            Bu kod belki basit ama<br>
+            içinden geldiği gibi yazdım.<br><br>
+            Seni önemsiyorum.
+        </div>
+    </div>
 
-<div id="yazi">Seni seviyorum ❤️</div>
-
-<script>
-
-document.getElementById("kalp").onclick = function() {
-    document.getElementById("kalp").style.display = "none";
-    document.getElementById("yazi").style.display = "block";
-};
-
-document.getElementById("yazi").onclick = function() {
-    document.getElementById("yazi").innerHTML = "İyi ki varsın ❤️";
-};
-
-</script>
-
+    <script>
+        function goster() {
+            document.querySelector(".tikla").style.display = "none";
+            document.getElementById("mesaj").style.display = "block";
+        }
+    </script>
 </body>
 </html>
